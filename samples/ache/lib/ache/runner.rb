@@ -4,7 +4,7 @@ module Ache
   class Runner
     def run
       
-      dd = Achiever::DefinitionDatumProvider.new
+      dd = Achiever::DefineProvider.new
 
       dd.register Level.new(:name => "Introduction")
       dd.register Level.new(:name => "Rising Action")

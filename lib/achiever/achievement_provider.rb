@@ -23,12 +23,12 @@ module Achiever
     private
 
     def expanded_parameterized_achievement(ach_class, context)
-      ddp      = context.definition_datum_provider
-      data     = ach_class.definition_datum_types.map{|klass| ddp.get_all klass}
+      defp      = context.define_provider
+      data     = ach_class.define_types.map{|klass| defp.get_all klass}
       expanded = data.first.product(*data.drop(1))
 
-      expanded.map do |definition_data|
-        ach_class.new definition_data, context
+      expanded.map do |defines|
+        ach_class.new defines, context
       end
     end
 

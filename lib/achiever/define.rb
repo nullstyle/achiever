@@ -2,7 +2,7 @@ require 'virtus'
 require 'active_support/concern'
     
 module Achiever
-  module DefinitionDatum
+  module Define
     extend ActiveSupport::Concern
 
     included do |base|

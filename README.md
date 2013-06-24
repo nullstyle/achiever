@@ -21,13 +21,13 @@ As you can see, Achiever itself doesn't do a whole bunch of work for you.  But i
 
 Say for example, your game has 20 different monsters, and you want to provide an achievement for killing 100, 1000, 5000, and 10000 of each type of monster.  That's a lot of repetition. By using Parameterized Achievements and Definition Data, Achiever will expand the template out into all the possible combinations.  It forms a cartesian product of the provided definition objects (grouped by class)
 
-### Definition Data
+### Defines
 
-you can define a piece of DimensionDatum by including it as a module:
+you can define a Define (heh) by including it as a module:
 
 ```ruby
 class Monster
-  include Achiever::DefinitionDatum
+  include Achiever::Define
 
   attribute :name, String
 
@@ -37,7 +37,7 @@ class Monster
 end
 ```
 
-You can then register instances of this object on a DefinitionDatum provider for later expansion.  
+You can then register instances of this object on a Define Provider for later expansion.  
 
 
 ## Installation

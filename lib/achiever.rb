@@ -9,8 +9,8 @@ module Achiever
 
   require 'achiever/core_ext/class'
 
-  autoload :DefinitionDatum
-  autoload :DefinitionDatumProvider
+  autoload :Define
+  autoload :DefineProvider
   
   autoload :Achievement
   autoload :ParameterizedAchievement
@@ -24,7 +24,7 @@ module Achiever
 
   def self.run(context, user_datas)
     achievement_provider          = context.achievement_provider
-    definition_datum_provider     = context.definition_datum_provider
+    define_provider               = context.define_provider
     achievement_metadata_provider = context.achievement_metadata_provider
 
     puts "expanding achievements"

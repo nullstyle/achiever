@@ -20,7 +20,7 @@ module Ache
     end
 
     def levels
-      @levels ||= @context.definition_datum_provider.get_all(Level)
+      @levels ||= @context.define_provider.get_all(Level)
     end
   end
 end

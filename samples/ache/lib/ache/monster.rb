@@ -1,6 +1,6 @@
 module Ache
   class Monster
-    include Achiever::DefinitionDatum
+    include Achiever::Define
 
     attribute :name, String
 

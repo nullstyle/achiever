@@ -1,6 +1,6 @@
 module Ache
   class Level
-    include Achiever::DefinitionDatum
+    include Achiever::Define
 
     attribute :name, String
 

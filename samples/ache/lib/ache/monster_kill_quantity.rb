@@ -1,6 +1,6 @@
 module Ache
   class MonsterKillQuantity
-    include Achiever::DefinitionDatum
+    include Achiever::Define
     
     attribute :count, Integer
 
