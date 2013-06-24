@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in ache.gemspec
+gemspec
+
+gem "achiever", :path => "../../"

@@ -1,0 +1,55 @@
+---
+Ache::GameCompleteAchievement/main:
+  name: Game complete
+  points: 20
+  icon: 
+---
+Ache::KillManyMonstersAchievement/dog/00001:
+  name: Down Boy
+  points: 5
+  icon: 
+---
+Ache::KillManyMonstersAchievement/dog/00005:
+  name: Pooch Slayer
+  points: 10
+  icon: 
+---
+Ache::KillManyMonstersAchievement/dog/00010:
+  name: Kanine Killer
+  points: 20
+  icon: 
+---
+Ache::KillManyMonstersAchievement/human/00001:
+  name: 
+  points: 
+  icon: 
+---
+Ache::KillManyMonstersAchievement/human/00005:
+  name: 
+  points: 
+  icon: 
+---
+Ache::KillManyMonstersAchievement/human/00010:
+  name: 
+  points: 
+  icon: 
+---
+Ache::KillManyMonstersAchievement/zombie/00001:
+  name: 
+  points: 
+  icon: 
+---
+Ache::KillManyMonstersAchievement/zombie/00005:
+  name: 
+  points: 
+  icon: 
+---
+Ache::KillManyMonstersAchievement/zombie/00010:
+  name: 
+  points: 
+  icon: 
+---
+Ache::PerfectLevelAchievement/main:
+  name: Can't Touch This
+  points: 10
+  icon: 
