@@ -1,8 +1,10 @@
+require 'set'
+
 module Achiever
   class AchievementProvider
 
     def initialize
-      @achievement_classes = []
+      @achievement_classes = Set.new
     end
 
     def register(achievement_class)
