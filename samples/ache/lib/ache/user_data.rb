@@ -2,10 +2,10 @@ module Ache
   class UserData
     attr_reader :user, :kills, :level_clears
 
-    def initialize(user, kills, level_clears)
+    def initialize(user)
       @user         = user
-      @kills        = kills
-      @level_clears = level_clears
+      @kills        = []
+      @level_clears = []
     end
 
   end

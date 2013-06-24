@@ -26,18 +26,18 @@ module Ache
 
 
       ud = []
-      ud << UserData.new("scott", [], [
-        LevelClear.new(Level.new(:name => "Introduction"), 20.days.ago, 90),
-        LevelClear.new(Level.new(:name => "Rising Action"), 10.days.ago, 90),
-        LevelClear.new(Level.new(:name => "Climax"), 10.days.ago, 50),
-        LevelClear.new(Level.new(:name => "Denouement"), 1.day.ago, 90),
-      ])
+      ud << s = UserData.new("scott")
+      s.level_clears << LevelClear.new(Level.new(:name => "Introduction"), 20.days.ago, 90)
+      s.level_clears << LevelClear.new(Level.new(:name => "Rising Action"), 10.days.ago, 90)
+      s.level_clears << LevelClear.new(Level.new(:name => "Climax"), 10.days.ago, 50)
+      s.level_clears << LevelClear.new(Level.new(:name => "Denouement"), 1.day.ago, 90)
+      
 
-      ud << UserData.new("tito", [], [
-        LevelClear.new(Level.new(:name => "Introduction"), 20.days.ago, 100),
-        LevelClear.new(Level.new(:name => "Rising Action"), 10.days.ago, 100),
-        LevelClear.new(Level.new(:name => "Climax"), 10.days.ago, 50),
-      ])
+      ud << t = UserData.new("tito")
+      t.level_clears << LevelClear.new(Level.new(:name => "Introduction"), 20.days.ago, 100)
+      t.level_clears << LevelClear.new(Level.new(:name => "Rising Action"), 10.days.ago, 100)
+      t.level_clears << LevelClear.new(Level.new(:name => "Climax"), 10.days.ago, 50)
+      
 
       Achiever.run(ctx, ud) # => spits out a map of users to unlocks
     end
