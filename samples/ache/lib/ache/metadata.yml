@@ -35,18 +35,18 @@ Ache::KillManyMonstersAchievement/human/00010:
   icon: 
 ---
 Ache::KillManyMonstersAchievement/zombie/00001:
-  name: 
-  points: 
+  name: Kill It With Fire
+  points: 5
   icon: 
 ---
 Ache::KillManyMonstersAchievement/zombie/00005:
-  name: 
-  points: 
+  name: Kill Five Of 'Em With Fire
+  points: 10
   icon: 
 ---
 Ache::KillManyMonstersAchievement/zombie/00010:
-  name: 
-  points: 
+  name: Zombie Genocide
+  points: 20
   icon: 
 ---
 Ache::PerfectLevelAchievement/main:

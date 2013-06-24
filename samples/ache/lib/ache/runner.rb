@@ -31,12 +31,17 @@ module Ache
       s.level_clears << LevelClear.new(Level.new(:name => "Rising Action"), 10.days.ago, 90)
       s.level_clears << LevelClear.new(Level.new(:name => "Climax"), 10.days.ago, 50)
       s.level_clears << LevelClear.new(Level.new(:name => "Denouement"), 1.day.ago, 90)
-      
+      s.kills << Kill.new(Monster.new(:name => "Zombie"), 1.day.ago, "machete")
 
       ud << t = UserData.new("tito")
       t.level_clears << LevelClear.new(Level.new(:name => "Introduction"), 20.days.ago, 100)
       t.level_clears << LevelClear.new(Level.new(:name => "Rising Action"), 10.days.ago, 100)
       t.level_clears << LevelClear.new(Level.new(:name => "Climax"), 10.days.ago, 50)
+      
+
+      5.times do
+        t.kills << Kill.new(Monster.new(:name => "Dog"), 10.day.ago, "machete")
+      end
       
 
       Achiever.run(ctx, ud) # => spits out a map of users to unlocks
