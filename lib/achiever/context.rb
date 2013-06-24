@@ -12,6 +12,14 @@ module Achiever
       @achievement_metadata_provider = AchievementMetadataProvider.new(@metadata_path)
     end
 
+    def add_define(define)
+      self.define_provider.register(define)
+    end
+
+    def add_achievement(achievement)
+      self.achievement_provider.register(achievement)
+    end
+
   end
 
 end

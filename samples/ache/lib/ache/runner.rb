@@ -4,29 +4,25 @@ module Ache
   class Runner
     def run
 
-      context = Achiever::Context.new(File.dirname(__FILE__) + "/metadata.yml")
-      dd = context.define_provider
+      ctx = Achiever::Context.new(File.dirname(__FILE__) + "/metadata.yml")
 
-      dd.register Level.new(:name => "Introduction")
-      dd.register Level.new(:name => "Rising Action")
-      dd.register Level.new(:name => "Climax")
-      dd.register Level.new(:name => "Denouement")
+      ctx.add_define Level.new(:name => "Introduction")
+      ctx.add_define Level.new(:name => "Rising Action")
+      ctx.add_define Level.new(:name => "Climax")
+      ctx.add_define Level.new(:name => "Denouement")
 
-      dd.register Monster.new(:name => "Zombie")
-      dd.register Monster.new(:name => "Dog")
-      dd.register Monster.new(:name => "Human")
+      ctx.add_define Monster.new(:name => "Zombie")
+      ctx.add_define Monster.new(:name => "Dog")
+      ctx.add_define Monster.new(:name => "Human")
 
-      dd.register MonsterKillQuantity.new(:count => 1)
-      dd.register MonsterKillQuantity.new(:count => 5)
-      dd.register MonsterKillQuantity.new(:count => 10)
+      ctx.add_define MonsterKillQuantity.new(:count => 1)
+      ctx.add_define MonsterKillQuantity.new(:count => 5)
+      ctx.add_define MonsterKillQuantity.new(:count => 10)
 
-      ac = context.achievement_provider
 
-      ac.register GameCompleteAchievement
-      ac.register PerfectLevelAchievement
-      ac.register KillManyMonstersAchievement
-
-      amd = context.achievement_metadata_provider
+      ctx.add_achievement GameCompleteAchievement
+      ctx.add_achievement PerfectLevelAchievement
+      ctx.add_achievement KillManyMonstersAchievement
 
 
       ud = []
@@ -43,7 +39,7 @@ module Ache
         LevelClear.new(Level.new(:name => "Climax"), 10.days.ago, 50),
       ])
 
-      Achiever.run(context, ud) # => spits out a map of users to unlocks
+      Achiever.run(ctx, ud) # => spits out a map of users to unlocks
     end
   end
 end
