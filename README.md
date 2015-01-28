@@ -1,5 +1,7 @@
 # Achiever
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nullstyle/achiever?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 An Achievement Platform.  Achiever provides a library upon which you could build a game or any other product that wants to allow its users to unlock achievements.
 
 On the whole, Achiever is designed to help build a batch-processing based model for calculating what achievements a given user has unlocked.
